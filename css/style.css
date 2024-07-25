@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* Custom Properties, update these for you own design*/
+
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
@@ -31,6 +33,10 @@
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -79,7 +85,7 @@ strong { font-weight: var(--fw-bold); }
 h1,
 h2,
 h3 {
-    line-height: 1.1;
+    line-height: 1;
     margin: 0,
 }
 
@@ -111,6 +117,12 @@ h3 { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+}
+
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
 }
 
 /* header*/
@@ -171,6 +183,31 @@ header {
     top: 1em;
     z-index: 1000;
 }
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+
+
+
+
 
 .hamburger {
     display:block;
@@ -268,6 +305,11 @@ header {
 
 .sevices {
     margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 @media (min-width: 800px) {
